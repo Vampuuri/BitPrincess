@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 		player.velocity = new Vector2(5f * dirX, player.velocity.y);
 		
         if (Input.GetButtonDown("Jump") && IsGrounded()) {
-			player.velocity = new Vector2(player.velocity.x, 10f);
+			player.velocity = new Vector2(player.velocity.x, 12f);
 		}
     }
 	
