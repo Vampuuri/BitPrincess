@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
     private int passwords = 0;
+
+    [SerializeField] private Text passwordsText;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,7 +15,7 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             passwords++;
-            Debug.Log(passwords);
+            passwordsText.text = "Passwords: " + passwords;
         }
     }
 }
