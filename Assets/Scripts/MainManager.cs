@@ -7,7 +7,7 @@ public class MainManager : MonoBehaviour
     public static MainManager Instance;
 
     private List<string> levels = new List<string>
-        {"Level1", "Level2", "Level3", "Level4"};
+        { "Level1", "Level2", "Level3", "Level4"};
 
     private void Awake()
     {
@@ -19,7 +19,14 @@ public class MainManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        Debug.Log(levels[0]);
+    }
+
+    public void RemoveLevel(string level)
+    {
+        if (levels.Contains(level))
+        {
+            levels.Remove(level);
+        }
     }
 
     public List<string> GetLevels()
