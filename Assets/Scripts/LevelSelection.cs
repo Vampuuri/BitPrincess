@@ -6,13 +6,21 @@ using UnityEngine.SceneManagement;
 public class LevelSelection : MonoBehaviour
 {
     public string Level;
+    MainManager manager;
+
+    void Awake()
+    {
+        GameObject managerObject = GameObject.Find("GameManager");
+        manager = managerObject.GetComponent<MainManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject manager = GameObject.Find("GameManager");
-        MainManager managerScript = manager.GetComponent<MainManager>();
-        Debug.Log(managerScript.GetLevels()[0]);
+        if (!manager.GetLevels().Contains(Level) && !Level.Equals("MainGame")) {
+            Debug.Log("I don't exist " + Level);
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
