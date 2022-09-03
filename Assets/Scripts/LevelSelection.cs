@@ -10,7 +10,9 @@ public class LevelSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject manager = GameObject.Find("GameManager");
+        MainManager managerScript = manager.GetComponent<MainManager>();
+        Debug.Log(managerScript.GetLevels()[0]);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

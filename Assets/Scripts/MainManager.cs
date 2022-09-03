@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class MainManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static MainManager Instance;
 
     private List<string> levels = new List<string>
         {"Level1", "Level2", "Level3", "Level4"};
@@ -20,5 +20,10 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         Debug.Log(levels[0]);
+    }
+
+    public List<string> GetLevels()
+    {
+        return levels;
     }
 }
