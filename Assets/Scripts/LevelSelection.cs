@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelection : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class LevelSelection : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Siirrytään leveliin: " + Level);
+            SceneManager.LoadScene(Level + "Scene");
         }
     }
 }
