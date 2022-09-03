@@ -15,7 +15,8 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             passwords++;
-            passwordsText.text = "Passwords: " + passwords;
+            Debug.Log("Passwords: " + passwords);
+            //passwordsText.text = "Passwords: " + passwords;
         }
     }
 }

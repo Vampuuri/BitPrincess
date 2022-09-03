@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PasswordCollectable
   - DeathTrap
+  - LevelEntrance
   layers:
   - Default
   - TransparentFX
