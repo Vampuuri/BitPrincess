@@ -6,6 +6,9 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
 
+    private bool carriesPassword = false;
+    public bool lockLevels = false;
+    private string currentLevel = "MainGame";
     private List<string> levels = new List<string>
         { "Level1", "Level2", "Level3", "Level4"};
 
@@ -21,6 +24,29 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void PasswordDelivered()
+    {
+        if (carriesPassword)
+        {
+            carriesPassword = false;
+            lockLevels = false;
+
+            GameObject[] levelPortals = GameObject.FindGameObjectsWithTag("LevelEntrance");
+            for (int i = 0; i < levelPortals.Length; i++)
+            {
+                levelPortals[i].GetComponent<LevelSelection>().activate();
+            }
+        }
+    }
+
+    public void RemoveCurrentLevel()
+    {
+        if (levels.Contains(currentLevel))
+        {
+            levels.Remove(currentLevel);
+        }
+    }
+
     public void RemoveLevel(string level)
     {
         if (levels.Contains(level))
@@ -32,5 +58,20 @@ public class MainManager : MonoBehaviour
     public List<string> GetLevels()
     {
         return levels;
+    }
+
+    public void SetCurrentLevel(string _level)
+    {
+        currentLevel = _level;
+    }
+
+    public bool IsCarryingPassword()
+    {
+        return carriesPassword;
+    }
+
+    public void SetCarriesPassword(bool value)
+    {
+        carriesPassword = value;
     }
 }

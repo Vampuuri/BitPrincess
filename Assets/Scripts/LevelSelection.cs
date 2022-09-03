@@ -8,6 +8,10 @@ public class LevelSelection : MonoBehaviour
     public string Level;
     MainManager manager;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite activeSprite;
+    public Sprite inActiveSprite;
+
     void Awake()
     {
         GameObject managerObject = GameObject.Find("GameManager");
@@ -21,14 +25,35 @@ public class LevelSelection : MonoBehaviour
             Debug.Log("I don't exist " + Level);
             Destroy(gameObject);
         }
+        else if (manager.lockLevels)
+        {
+            spriteRenderer.sprite = inActiveSprite;
+        }
+    }
+
+    public void activate()
+    {
+        if (activeSprite)
+        {
+            spriteRenderer.sprite = activeSprite;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Siirrytään leveliin: " + Level);
-            SceneManager.LoadScene(Level + "Scene");
+            if (manager.IsCarryingPassword())
+            {
+                manager.lockLevels = true;
+                manager.RemoveCurrentLevel();
+            }
+            if (Level.Equals("MainGame") || spriteRenderer.sprite.Equals(activeSprite))
+            {
+                manager.SetCurrentLevel(Level);
+                Debug.Log("Siirrytään leveliin: " + Level);
+                SceneManager.LoadScene(Level + "Scene");
+            }
         }
     }
 }
