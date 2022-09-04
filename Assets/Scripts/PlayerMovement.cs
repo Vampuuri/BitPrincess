@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 	
 	[SerializeField] private LayerMask jumpableGround;
 
-	private enum MovementState { idle, running, jumping, falling, death };
+	private enum MovementState { idle, running, jumping, falling };
 	
     // Start is called before the first frame update
     void Start()
