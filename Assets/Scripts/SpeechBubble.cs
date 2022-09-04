@@ -1,46 +1,85 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpeechBubble : MonoBehaviour
 {
     public class SpeechLine 
     {
-        public int id;
         public string line;
         public int nextLineId;
 
-        public SpeechLine(int _id, string _line, int _nextLineId)
+        public SpeechLine(string _line, int _nextLineId)
         {
-            id = _id;
             line = _line;
             nextLineId = _nextLineId;
         }
     }
 
-    public SpeechLine[] lines = {
-        new SpeechLine(1, "Thank goodness, you are here!", 2),
-        new SpeechLine(2, "I've been trapped behind this firey wall.", 3),
-        new SpeechLine(3, "I need you to collect four passwords to take it down.", 4),
-        new SpeechLine(4, "Please help me, hero.", -1),
-        new SpeechLine(5, "Don't lose hope!", -1),
-        new SpeechLine(6, "You are so close!", -1),
-        new SpeechLine(7, "I believe in you!", -1),
-        new SpeechLine(8, "Hero, please don't give up.", -1),
-        new SpeechLine(9, "Good job, hero, I knew you could do it!", -1),
-        new SpeechLine(10, "Hero, I am impressed. Two passwords is not an easy task!", -1),
-        new SpeechLine(11, "Almost there, hero. Just one more to go!", -1)
+    public Text text;
+    private bool speaking = false;
+
+    public Dictionary<int, SpeechLine> lines = new Dictionary<int, SpeechLine>() {
+        {1, new SpeechLine("Thank goodness, you are here!", 2)},
+        {2, new SpeechLine("I've been trapped behind this firey wall.", 3)},
+        {3, new SpeechLine("I need you to collect four passwords to take it down.", 4)},
+        {4, new SpeechLine("Please help me, hero.", -1)},
+        {5, new SpeechLine("Don't lose hope!", -1)},
+        {6, new SpeechLine("You are so close!", -1)},
+        {7, new SpeechLine("I believe in you!", -1)},
+        {8, new SpeechLine("Hero, please don't give up.", -1)},
+        {9, new SpeechLine("Good job, hero, I knew you could do it!", -1)},
+        {10, new SpeechLine("Hero, I am impressed. Two passwords is not an easy task!", -1)},
+        {11, new SpeechLine("Almost there, hero. Just one more to go!", -1)}
     };
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<SpriteRenderer>().enabled = false;
+        text.text = "";
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (speaking)
+        {
+            GetComponent<SpriteRenderer>().enabled = true;
+        }
+    }
+
+    public void TriggerStartingDialogue()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        StartCoroutine(SpeakLine(1));
+    }
+
+    public void TriggerEncouragementDialogue()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        StartCoroutine(SpeakLine(Random.Range(5,8)));
+    }
+
+    private IEnumerator WaitThenStart(int id)
+    {
+        yield return new WaitForSeconds(.5f);
+        speaking = true;
+        StartCoroutine(SpeakLine(id));
+    }
+
+    private IEnumerator SpeakLine(int id)
+    {
+        text.text = lines[id].line;
+        yield return new WaitForSeconds(3);
+        if (lines[id].nextLineId > 0)
+        {
+            StartCoroutine(SpeakLine(lines[id].nextLineId));
+        }
+        else
+        {
+            text.text = "";
+            speaking = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }

@@ -22,7 +22,6 @@ public class LevelSelection : MonoBehaviour
     void Start()
     {
         if (!manager.GetLevels().Contains(Level) && !Level.Equals("MainGame")) {
-            Debug.Log("I don't exist " + Level);
             Destroy(gameObject);
         }
         else if (manager.lockLevels)
@@ -50,9 +49,8 @@ public class LevelSelection : MonoBehaviour
             }
             if (Level.Equals("MainGame") || spriteRenderer.sprite.Equals(activeSprite))
             {
-                manager.SetCurrentLevel(Level);
-                Debug.Log("Siirrytään leveliin: " + Level);
                 SceneManager.LoadScene(Level + "Scene");
+                manager.SetCurrentLevel(Level);
             }
         }
     }

@@ -9,6 +9,7 @@ public class MainManager : MonoBehaviour
     private bool carriesPassword = false;
     public bool lockLevels = false;
     private string currentLevel = "MainGame";
+    private bool introTextSeen = false;
 
     private List<string> allLevels = new List<string>
         { "Level1", "Level2", "Level3", "Level4"};
@@ -76,6 +77,35 @@ public class MainManager : MonoBehaviour
     public List<string> GetLevels()
     {
         return levels;
+    }
+
+    void OnLevelWasLoaded(int level) {
+        if (level == 1)
+        {
+            if (!introTextSeen)
+            {
+                introTextSeen = true;
+                StartCoroutine(TriggerStartingDialogueAfterAMoment());
+            }
+            else if (!carriesPassword)
+            {
+                StartCoroutine(TriggerEncouragementDialogueAfterAMoment());
+            }
+        }
+    }
+
+    private IEnumerator TriggerStartingDialogueAfterAMoment()
+    {
+        yield return new WaitForSeconds(.5f);
+        GameObject speechBubble = GameObject.FindGameObjectWithTag("SpeechBubble");
+        speechBubble.GetComponent<SpeechBubble>().TriggerStartingDialogue();
+    }
+
+    private IEnumerator TriggerEncouragementDialogueAfterAMoment()
+    {
+        yield return new WaitForSeconds(.5f);
+        GameObject speechBubble = GameObject.FindGameObjectWithTag("SpeechBubble");
+        speechBubble.GetComponent<SpeechBubble>().TriggerEncouragementDialogue();
     }
 
     public void SetCurrentLevel(string _level)

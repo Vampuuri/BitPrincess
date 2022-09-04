@@ -923,9 +923,10 @@ GameObject:
   m_Component:
   - component: {fileID: 976721440}
   - component: {fileID: 976721439}
+  - component: {fileID: 976721441}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: SpeechBubble
+  m_TagString: SpeechBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,6 +997,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976721441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976721438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa22959e52f49844943fed155ae9333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1638285786}
 --- !u!1 &1044480932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +1067,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41f85f8a64dcc2d40bf8c561e7d6a7fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86e20446192b65e44943cead30b8e173, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1072,7 +1086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044480932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.71, z: 0}
+  m_LocalPosition: {x: -0, y: 2.71, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1454,8 +1468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 478, y: 375.42566}
-  m_SizeDelta: {x: 454.6622, y: 112.8346}
+  m_AnchoredPosition: {x: 478, y: 373.19928}
+  m_SizeDelta: {x: 454.6622, y: 117.2874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638285786
 MonoBehaviour:
@@ -1490,7 +1504,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Please help me, hero.
+  m_Text: 
 --- !u!222 &1638285787
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - LevelEntrance
   - PasswordReceptor
   - Chain
+  - SpeechBubble
   layers:
   - Default
   - TransparentFX
