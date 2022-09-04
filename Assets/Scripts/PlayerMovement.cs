@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private float jumpForce = 12f;
 	
 	[SerializeField] private LayerMask jumpableGround;
+
+	private enum MovementState { idle, running, jumping, falling, death };
 	
     // Start is called before the first frame update
     void Start()
@@ -39,20 +41,33 @@ public class PlayerMovement : MonoBehaviour
 
 	private void UpdateAnimation()
 	{
+		MovementState state;
+
 		if (dirX > 0f)
 		{
-			animator.SetBool("running", true);
+			state = MovementState.running;
 			sprite.flipX = false;
 		}
 		else if (dirX < 0f)
 		{
-			animator.SetBool("running", true);
+			state = MovementState.running;
 			sprite.flipX = true;
 		}
 		else
 		{
-			animator.SetBool("running", false);
+			state = MovementState.idle;
 		}
+
+		if (player.velocity.y > .1f)
+		{
+			state = MovementState.jumping;
+		}
+		else if (player.velocity.y < -.1f)
+		{
+			state = MovementState.falling;
+		}
+
+		animator.SetInteger("state", (int)state);
 	}
 	
 	private bool IsGrounded()
