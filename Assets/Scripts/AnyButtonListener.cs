@@ -8,16 +8,13 @@ public class AnyButtonListener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if (Input.anyKeyDown)
         {
-            if (Input.GetKey(KeyCode.Escape))
-            {
-                Application.Quit();
-            }
-            else
-            {
-                SceneManager.LoadScene("MainGameScene");
-            }
+            SceneManager.LoadScene("MainGameScene");
         }
     }
 }
