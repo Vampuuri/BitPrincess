@@ -55,11 +55,15 @@ public class CutScene : MonoBehaviour
             {
                 spriteRenderer.sprite = scenes[index];
             }
-            else
+            else if (index == scenes.Count)
             {
                 ThankYouText.text = thankYouString;
                 CreditsText.text = creditsString;
                 spriteRenderer.sprite = null;
+            }
+            else
+            {
+                Application.Quit();
             }
         }
     }
