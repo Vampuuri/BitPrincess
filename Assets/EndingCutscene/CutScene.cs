@@ -20,6 +20,7 @@ public class CutScene : MonoBehaviour
 
     [SerializeField] Text ThankYouText;
     [SerializeField] Text CreditsText;
+    [SerializeField] Text CaptionsText;
 
     private string thankYouString = "Thank you\nfor playing";
     private string creditsString = "Programming\nVampuuri\n\nConcept, level design\nStormwave\n\nEnvironment Graphics\nShaakku\n\nCharacter design, animations, graphics\nMizku";
@@ -36,7 +37,8 @@ public class CutScene : MonoBehaviour
             {3, cut4},
             {4, cut5},
             {5, cut6},
-            {6, cut7}
+            {6, cut7},
+            {7, cut8}
         };
     }
 
@@ -46,11 +48,25 @@ public class CutScene : MonoBehaviour
         if (Input.anyKeyDown)
         {
             index++;
-            if (index == 3)
+            if (index == 1)
             {
+                CaptionsText.text = "Thank you for helping me!";
+            }
+            else if (index == 2)
+            {
+                CaptionsText.text = "Thank you for...";
+            }
+            else if (index == 3)
+            {
+                CaptionsText.text = "Letting me in";
                 AudioSource.clip = horrorClip;
                 AudioSource.Play();
             }
+            else
+            {
+                CaptionsText.text = "";
+            }
+            
             if(scenes.ContainsKey(index))
             {
                 spriteRenderer.sprite = scenes[index];
