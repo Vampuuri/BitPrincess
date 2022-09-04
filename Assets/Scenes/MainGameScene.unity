@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: activeSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 24e00e2ce6405494da63772a7a2cc351, type: 3}
+      objectReference: {fileID: 21300000, guid: e4f542e9fb8b03149ac74c84fd82c3ff, type: 3}
     - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: inActiveSprite
       value: 
@@ -242,6 +242,34 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 390973806}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.23594403
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.35602385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.000000029802322
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273481574690353930, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e4f542e9fb8b03149ac74c84fd82c3ff, type: 3}
     - target: {fileID: 3273481574690353932, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: m_Name
       value: LevelEntrance
@@ -459,7 +487,7 @@ PrefabInstance:
     - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: activeSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 24e00e2ce6405494da63772a7a2cc351, type: 3}
+      objectReference: {fileID: 21300000, guid: a99e5726a91710a499848ebeee076ff3, type: 3}
     - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: inActiveSprite
       value: 
@@ -468,6 +496,34 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 471722806}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.22692156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3593792
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.001790002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273481574690353930, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a99e5726a91710a499848ebeee076ff3, type: 3}
     - target: {fileID: 3273481574690353932, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: m_Name
       value: LevelEntrance (1)
@@ -1052,7 +1108,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 24e00e2ce6405494da63772a7a2cc351, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5091a60978b0e6c44a09d0de49d2238a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1077,7 +1133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: Level1
   spriteRenderer: {fileID: 1454287004}
-  activeSprite: {fileID: 21300000, guid: 24e00e2ce6405494da63772a7a2cc351, type: 3}
+  activeSprite: {fileID: 21300000, guid: 5091a60978b0e6c44a09d0de49d2238a, type: 3}
   inActiveSprite: {fileID: 21300000, guid: f3c6fc68fd7d3e240a4c939c10b425f1, type: 3}
 --- !u!61 &1454287006
 BoxCollider2D:
@@ -1092,18 +1148,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0030019283, y: 0.001500994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.25, y: 0.375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.22393608, y: 0.35302192}
   m_EdgeRadius: 0
 --- !u!4 &1602693851 stripped
 Transform:
@@ -1365,7 +1421,7 @@ PrefabInstance:
     - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: activeSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 24e00e2ce6405494da63772a7a2cc351, type: 3}
+      objectReference: {fileID: 21300000, guid: 2bae9f04d36023249af3ab5697086fb4, type: 3}
     - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: inActiveSprite
       value: 
@@ -1374,6 +1430,34 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1233017935}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.24124146
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.35221937
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.001790002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273481574690353930, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2bae9f04d36023249af3ab5697086fb4, type: 3}
     - target: {fileID: 3273481574690353932, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: m_Name
       value: LevelEntrance (2)
@@ -1550,6 +1634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockLevels: 0
+  destroyChains: []
 --- !u!4 &2038715669
 Transform:
   m_ObjectHideFlags: 0
