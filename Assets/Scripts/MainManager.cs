@@ -55,6 +55,9 @@ public class MainManager : MonoBehaviour
             {
                 chains[i].GetComponent<ChainDesrtoyable>().CheckDestroy(destroyChains);
             }
+
+            GameObject speechBubble = GameObject.FindGameObjectWithTag("SpeechBubble");
+            speechBubble.GetComponent<SpeechBubble>().TriggerPasswordDialogue(allLevels.Count - levels.Count);
         }
     }
 

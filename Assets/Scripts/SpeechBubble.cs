@@ -60,6 +60,15 @@ public class SpeechBubble : MonoBehaviour
         StartCoroutine(SpeakLine(Random.Range(5,8)));
     }
 
+    public void TriggerPasswordDialogue(int keyNumber)
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        if (keyNumber < 4)
+        {
+            StartCoroutine(SpeakLine(8 + keyNumber));
+        }
+    }
+
     private IEnumerator WaitThenStart(int id)
     {
         yield return new WaitForSeconds(.5f);
