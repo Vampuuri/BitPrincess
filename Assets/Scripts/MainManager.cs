@@ -9,8 +9,12 @@ public class MainManager : MonoBehaviour
     private bool carriesPassword = false;
     public bool lockLevels = false;
     private string currentLevel = "MainGame";
+
+    private List<string> allLevels = new List<string>
+        { "Level1", "Level2", "Level3", "Level4"};
     private List<string> levels = new List<string>
         { "Level1", "Level2", "Level3", "Level4"};
+    public List<string> destroyChains = new List<string> {};
 
     private void Awake()
     {
@@ -31,10 +35,24 @@ public class MainManager : MonoBehaviour
             carriesPassword = false;
             lockLevels = false;
 
+            for (int i = 0; i < allLevels.Count; i++)
+            {
+                if (!levels.Contains(allLevels[i]) && !destroyChains.Contains(allLevels[i]))
+                {
+                    destroyChains.Add(allLevels[i]);
+                }
+            }
+
             GameObject[] levelPortals = GameObject.FindGameObjectsWithTag("LevelEntrance");
             for (int i = 0; i < levelPortals.Length; i++)
             {
                 levelPortals[i].GetComponent<LevelSelection>().activate();
+            }
+
+            GameObject[] chains = GameObject.FindGameObjectsWithTag("Chain");
+            for (int i = 0; i < chains.Length; i++)
+            {
+                chains[i].GetComponent<ChainDesrtoyable>().CheckDestroy(destroyChains);
             }
         }
     }

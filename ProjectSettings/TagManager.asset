@@ -8,6 +8,7 @@ TagManager:
   - DeathTrap
   - LevelEntrance
   - PasswordReceptor
+  - Chain
   layers:
   - Default
   - TransparentFX
