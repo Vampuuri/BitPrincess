@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class MainManager : MonoBehaviour
             carriesPassword = false;
             lockLevels = false;
 
+            int passWordsRetrieved = allLevels.Count - levels.Count;
+
             for (int i = 0; i < allLevels.Count; i++)
             {
                 if (!levels.Contains(allLevels[i]) && !destroyChains.Contains(allLevels[i]))
@@ -53,12 +56,25 @@ public class MainManager : MonoBehaviour
             GameObject[] chains = GameObject.FindGameObjectsWithTag("Chain");
             for (int i = 0; i < chains.Length; i++)
             {
-                chains[i].GetComponent<ChainDesrtoyable>().CheckDestroy(destroyChains);
+                chains[i].GetComponent<ChainDesrtoyable>()?.CheckDestroy(destroyChains);
             }
 
-            GameObject speechBubble = GameObject.FindGameObjectWithTag("SpeechBubble");
-            speechBubble.GetComponent<SpeechBubble>().TriggerPasswordDialogue(allLevels.Count - levels.Count);
+            if (passWordsRetrieved < 4)
+            {
+                GameObject speechBubble = GameObject.FindGameObjectWithTag("SpeechBubble");
+                speechBubble.GetComponent<SpeechBubble>().TriggerPasswordDialogue(passWordsRetrieved);
+            }
+            else
+            {
+                StartCoroutine(TriggerEndingCutscene());
+            }
         }
+    }
+
+    private IEnumerator TriggerEndingCutscene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("EndingScene");
     }
 
     public void RemoveCurrentLevel()

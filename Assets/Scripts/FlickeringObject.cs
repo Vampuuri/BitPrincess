@@ -14,15 +14,8 @@ public class FlickeringObject : MonoBehaviour
         StartCoroutine(ObjectOn());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator ObjectOn()
     {
-        Debug.Log("on");
         spriteRenderer.enabled = true;
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(onTime);
@@ -31,7 +24,6 @@ public class FlickeringObject : MonoBehaviour
 
     private IEnumerator ObjectOff()
     {
-        Debug.Log("off");
         spriteRenderer.enabled = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(offTime);
