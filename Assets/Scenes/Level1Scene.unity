@@ -237,14 +237,38 @@ PrefabInstance:
       propertyPath: Level
       value: MainGame
       objectReference: {fileID: 0}
+    - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: activeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 18d929691875c1e4c9e7461a037d95d1, type: 3}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.26811004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.19637871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.025944974
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.010553047
+      objectReference: {fileID: 0}
     - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
+      value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 3273481574690353930, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 18d929691875c1e4c9e7461a037d95d1, type: 3}
     - target: {fileID: 3273481574690353932, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: m_Name
       value: LevelEntrance
@@ -365,7 +389,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &348604635
 GameObject:

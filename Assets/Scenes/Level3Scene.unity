@@ -341,6 +341,38 @@ PrefabInstance:
       propertyPath: Level
       value: MainGame
       objectReference: {fileID: 0}
+    - target: {fileID: 585775918296128547, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: activeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 18d929691875c1e4c9e7461a037d95d1, type: 3}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.28633094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.20368892
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.029077768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0061216056
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270818630387858769, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273481574690353930, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 18d929691875c1e4c9e7461a037d95d1, type: 3}
     - target: {fileID: 3273481574690353932, guid: 70ceca43bcddfee45b2b351c3b9ebfa3, type: 3}
       propertyPath: m_Name
       value: LevelEntrance
