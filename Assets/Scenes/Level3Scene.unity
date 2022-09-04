@@ -7358,6 +7358,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6626379055149669482, guid: 1d71966a083350c4a986354559a32b47, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7211778
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626379055149669482, guid: 1d71966a083350c4a986354559a32b47, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.13941108
+      objectReference: {fileID: 0}
     - target: {fileID: 6626379055149669484, guid: 1d71966a083350c4a986354559a32b47, type: 3}
       propertyPath: m_RootOrder
       value: 22
