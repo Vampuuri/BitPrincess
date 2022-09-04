@@ -444,7 +444,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b0e73f624fff61440846173cefb5d534, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b139e14deb7f1d4aace16ef0ceeaa37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -484,14 +484,14 @@ MonoBehaviour:
   AudioSource: {fileID: 1855372325}
   horrorClip: {fileID: 8300000, guid: e228c43a63d2649ceb7e385c3d3864e2, type: 3}
   spriteRenderer: {fileID: 1180273188}
-  cut1: {fileID: 21300000, guid: b0e73f624fff61440846173cefb5d534, type: 3}
-  cut2: {fileID: 21300000, guid: 2ac64ee7044dd424999a294a593e89b4, type: 3}
-  cut3: {fileID: 21300000, guid: 0723068e7f5dbfc4cab9c24be5cdf944, type: 3}
-  cut4: {fileID: 21300000, guid: e027635e557bff544a89628f64500f45, type: 3}
-  cut5: {fileID: 21300000, guid: c0ae893d587ebc7438a4b65b956535dd, type: 3}
-  cut6: {fileID: 21300000, guid: 8a2106ff5b341f74ab43a86d314296c6, type: 3}
-  cut7: {fileID: 21300000, guid: faaa4214e89875a409af1de09b80e48c, type: 3}
-  cut8: {fileID: 0}
+  cut1: {fileID: 21300000, guid: 4b139e14deb7f1d4aace16ef0ceeaa37, type: 3}
+  cut2: {fileID: 21300000, guid: 7e746a4e67f30d846b995f24874dafad, type: 3}
+  cut3: {fileID: 21300000, guid: 1fbaac05fbe652f4c94c6244266a8d57, type: 3}
+  cut4: {fileID: 21300000, guid: 9dcc60bb88639174f884d9a7beb10711, type: 3}
+  cut5: {fileID: 21300000, guid: ac17c88e14ed96e469b095801fd5fd6f, type: 3}
+  cut6: {fileID: 21300000, guid: 19a838f7f1c069b4ea4987061eb5e5a8, type: 3}
+  cut7: {fileID: 21300000, guid: 94f785bcb6ab9d044a488555f5946598, type: 3}
+  cut8: {fileID: 21300000, guid: fb877331bfd90e74ab28d94e4f23404c, type: 3}
   ThankYouText: {fileID: 1057008391}
   CreditsText: {fileID: 1669331516}
 --- !u!1 &1430762382
