@@ -57,7 +57,7 @@ public class SpeechBubble : MonoBehaviour
     public void TriggerEncouragementDialogue()
     {
         GetComponent<SpriteRenderer>().enabled = true;
-        StartCoroutine(SpeakLine(Random.Range(5,8)));
+        StartCoroutine(SpeakLine(Random.Range(5,9)));
     }
 
     public void TriggerPasswordDialogue(int keyNumber)
