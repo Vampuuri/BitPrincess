@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemCollector : MonoBehaviour
 {
     MainManager manager;
+    [SerializeField] private ParticleSystem sparkleEffect;
+    [SerializeField] private AudioSource collectionSoundEffect;
 
     void Start()
     {
@@ -12,13 +14,12 @@ public class ItemCollector : MonoBehaviour
         manager = managerObject.GetComponent<MainManager>();
     }
 
-    [SerializeField] private AudioSource collectionSoundEffect;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PasswordCollectable"))
         {
             collectionSoundEffect.Play();
+            sparkleEffect.Play();
             Destroy(collision.gameObject);
             manager.SetCarriesPassword(true);
         }

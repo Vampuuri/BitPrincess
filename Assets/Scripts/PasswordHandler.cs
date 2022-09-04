@@ -5,6 +5,7 @@ using UnityEngine;
 public class PasswordHandler : MonoBehaviour
 {
     MainManager manager;
+    [SerializeField] private ParticleSystem sparkleEffect;
 
     void Start()
     {
@@ -16,6 +17,10 @@ public class PasswordHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PasswordReceptor"))
         {
+            if (manager.IsCarryingPassword())
+            {
+                sparkleEffect.Play();
+            }
             manager.PasswordDelivered();
         }
     }
