@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CutScene : MonoBehaviour
 {
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip horrorClip;
+
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite cut1;
     [SerializeField] private Sprite cut2;
@@ -36,6 +39,11 @@ public class CutScene : MonoBehaviour
         if (Input.anyKeyDown)
         {
             index++;
+            if (index == 3)
+            {
+                AudioSource.clip = horrorClip;
+                AudioSource.Play();
+            }
             if(scenes.ContainsKey(index))
             {
                 spriteRenderer.sprite = scenes[index];
