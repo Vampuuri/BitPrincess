@@ -10,7 +10,14 @@ public class AnyButtonListener : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            SceneManager.LoadScene("MainGameScene");
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+            else
+            {
+                SceneManager.LoadScene("MainGameScene");
+            }
         }
     }
 }

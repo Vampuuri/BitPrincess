@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CutScene : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class CutScene : MonoBehaviour
     [SerializeField] private Sprite cut6;
     [SerializeField] private Sprite cut7;
     [SerializeField] private Sprite cut8;
+
+    [SerializeField] Text ThankYouText;
+    [SerializeField] Text CreditsText;
+
+    private string thankYouString = "Thank you\nfor playing";
+    private string creditsString = "Programming\nVampuuri\n\nConcept, level design\nStormwave\n\nEnvironment Graphics\nShaakku\n\nCharacter design, animations, graphics\nMizku";
 
     private int index = 0;
     private Dictionary<int, Sprite> scenes;
@@ -50,6 +57,8 @@ public class CutScene : MonoBehaviour
             }
             else
             {
+                ThankYouText.text = thankYouString;
+                CreditsText.text = creditsString;
                 spriteRenderer.sprite = null;
             }
         }
